@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	id="Cordova-Plugin-FCMNotification"
+	version="1.0.0-dev">
+	<name>FCM Notification Service</name>
+	<description>FCM Notification Service With Cordova/PhoneGap</description>
+	<license>Apache 2.0</license>
+	<keywords>cordova,FCM,FCMNotification,notification</keywords>
+	 <info>
+			Cross Platform FCM Notification Service With Cordova/PhoneGap android application
+      		1.) Open file "build.gradle" (Path : platform > android > build.gradle)
+         	2.) find "buildscript" text in "build.gradle" file.
+          3.) There you will find one classpath line, after that line, please add this line :
+               classpath 'com.google.gms:google-services:3.0.0'
+				 4.) Then find "dependencies" (Select that dependencies where you have text "compile" and where that dependecies is getting ended, just after that, add this line :
+       				apply plugin: 'com.google.gms.google-services'
+	</info>
+ <js-module src="www/FCMNotificationPlugin.js" name="CDVPushyMe">
+		<clobbers target="navigator.FCMNotification"/>
+	</js-module>
+	<engines>
+        <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+  <!-- android -->
+	<platform name="android">
+     <config-file target="res/xml/config.xml" parent="/*">
+				 <feature name="FCMNotificationPlugin">
+		        <param name="android-package" value="com.lokesh.FCMNotification.plugin.FCMNotificationPlugin" />
+		    </feature>
+    	</config-file>
+	   <config-file target="AndroidManifest.xml" parent="/manifest/application">
+			 <activity android:name="com.lokesh.FCMNotification.plugin.FCMNotificationHandlerActivity"
+	             android:theme="@android:style/Theme.Black.NoTitleBar">
+	         </activity>
+			 <!-- [START firebase_service] -->
+					 <service
+							 android:name="com.lokesh.FCMNotification.plugin.MyFirebaseMessagingService">
+							 <intent-filter>
+									 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+							 </intent-filter>
+					 </service>
+					 <!-- [END firebase_service] -->
+					 <!-- [START firebase_iid_service] -->
+					 <service
+							 android:name="com.lokesh.FCMNotification.plugin.MyFirebaseInstanceIDService">
+							 <intent-filter>
+									 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+							 </intent-filter>
+					 </service>
+					 <!-- [END firebase_iid_service] -->
+    </config-file>
+
+				<config-file target="AndroidManifest.xml" parent="/*">
+		            <uses-permission android:name="android.permission.INTERNET" />
+		            <uses-permission android:name="android.permission.WAKE_LOCK" />
+		            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		   </config-file>
+
+				<framework src="com.android.support:appcompat-v7:23.2.1" />
+			  <framework src="com.google.firebase:firebase-messaging:9.0.2" />
+
+			 	<source-file src="src/android/FCMNotificationHandlerActivity.java" target-dir="src/com/lokesh/FCMNotification/plugin" />
+				<source-file src="src/android/FCMNotificationPlugin.java" target-dir="src/com/lokesh/FCMNotification/plugin" />
+			  <source-file src="src/android/MyFirebaseInstanceIDService.java" target-dir="src/com/lokesh/FCMNotification/plugin" />
+				<source-file src="src/android/MyFirebaseMessagingService.java" target-dir="src/com/lokesh/FCMNotification/plugin" />
+
+	</platform>
+</plugin>

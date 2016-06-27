@@ -1,0 +1,21 @@
+{
+  "name": "Cordova-Plugin-FCMNotification",
+  "version": "1.0.0-dev",
+  "description": "cordova plugin FCMNotification",
+  "cordova": {
+    "id": "Cordova-Plugin-FCMNotification",
+    "platforms": ["android"]
+    },
+    "repository": {
+      "type": "Github",
+      "url": "https://github.com/LokeshPatel/Cordova-Plugin-FCMNotification.git"
+      },
+      "keywords": [
+      "cordova",
+      "Notification",
+      "FCMNotification",
+      "cordova-android"
+      ],
+      "author": "Lokesh Patel",
+      "license": "Apache 2.0"
+}

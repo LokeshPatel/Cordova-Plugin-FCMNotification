@@ -68,7 +68,7 @@ Steps:
 
 ## 2) Message store in local store : Read all message  
   ```
- navigator.FCMNotification.pushyMeReadAllMessages(function(result){
+ navigator.FCMNotification.fcmReadAllMessages(function(result){
      /* Return all message in json formate with id and message */
    console.log(result);
  },function(e){console.log(e)}
@@ -79,7 +79,7 @@ Steps:
 
 ## 3) Remove all messages from local store  
   ```
-     navigator.FCMNotification.pushyMeClearAllMessages(function(result){
+     navigator.FCMNotification.fcmClearAllMessages(function(result){
         console.log(result);
 
      }, function(error){
@@ -89,7 +89,7 @@ Steps:
 
 ## 4) Remove messages from local store (one by one) :
   ```
-     navigator.FCMNotification.pushyMeClearByMessagesId(function(result){
+     navigator.FCMNotification.fcmClearByMessagesId(function(result){
         console.log(result);
       }, function(error){
         console.log(error);

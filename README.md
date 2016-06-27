@@ -8,6 +8,12 @@ Reference: [Firebase Cloud Messaging](https://firebase.google.com/docs/notificat
 
 First Create project on [console firebase](https://console.firebase.google.com/)
 
+Download google-services.json file on firebase console and add "platform/android" path.
+
+###Like below image :
+
+<img src="https://dl.dropboxusercontent.com/s/l5xw8890243805h/3.png?dl=0" alt="Image 1" width="750" height="360">
+
 =============
 
 ## Master branch:
@@ -36,6 +42,8 @@ Steps:
       classpath 'com.google.gms:google-services:3.0.0'
 
 ```
+###Like below image :
+
 <img src="https://dl.dropboxusercontent.com/s/sa0xmdh3b1e8b8j/1.png?dl=0" alt="Image 0" width="836" height="286">
 
 ```
@@ -43,6 +51,8 @@ Steps:
 
            apply plugin: 'com.google.gms.google-services'
 ```
+###Like below image :
+
 <img src="https://dl.dropboxusercontent.com/s/nsqyjmpwx6kzniw/2.png?dl=0" alt="Image 1" width="800" height="200">
 
 ## 1) Get FCM Notification Token-Id

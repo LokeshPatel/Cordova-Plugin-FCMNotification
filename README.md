@@ -43,7 +43,7 @@ Steps:
 
            apply plugin: 'com.google.gms.google-services'
 ```
-<img src="https://dl.dropboxusercontent.com/s/nsqyjmpwx6kzniw/2.png?dl=0" alt="Image 1" width="836" height="286">
+<img src="https://dl.dropboxusercontent.com/s/nsqyjmpwx6kzniw/2.png?dl=0" alt="Image 1" width="800" height="200">
 
 ## 1) Get FCM Notification Token-Id
   ```

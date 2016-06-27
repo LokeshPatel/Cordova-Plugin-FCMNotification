@@ -36,14 +36,14 @@ Steps:
       classpath 'com.google.gms:google-services:3.0.0'
 
 ```
-<img src="https://dl.dropboxusercontent.com/s/sa0xmdh3b1e8b8j/1.png?dl=0" alt="Image 0" width="160">
+<img src="https://dl.dropboxusercontent.com/s/sa0xmdh3b1e8b8j/1.png?dl=0" alt="Image 0" width="836" height="286">
 
 ```
 4.) then find "dependencies" (Select that dependencies where you have text "compile" and where that dependencies is getting ended, just after that, add this line :
 
            apply plugin: 'com.google.gms.google-services'
 ```
-<img src="https://dl.dropboxusercontent.com/s/nsqyjmpwx6kzniw/2.png?dl=0" alt="Image 1" width="160">
+<img src="https://dl.dropboxusercontent.com/s/nsqyjmpwx6kzniw/2.png?dl=0" alt="Image 1" width="836" height="286">
 
 ## 1) Get FCM Notification Token-Id
   ```
